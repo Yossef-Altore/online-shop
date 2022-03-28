@@ -1,0 +1,86 @@
+.LoginFormDiv {
+  width: 60%;
+  height: 100%;
+  border: 1px solid lightgray;
+  box-shadow: -5px 5px 5px darkgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20vh;
+  background-color: rgb(241, 237, 237);
+  form {
+    margin-top: 100px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .emailDiv {
+      width: 40%;
+      height: 50px;
+      border-radius: 25px;
+      position: relative;
+      label {
+        position: absolute;
+        top: -7px;
+        right: 25px;
+        z-index: 2;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        display: none;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        font-size: 18px;
+        border-radius: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        z-index: 1;
+        font-weight: bold;
+        &:focus::placeholder {
+          color: transparent;
+        }
+        &:focus + label {
+          color: blue;
+          display: block;
+        }
+        &:focus {
+          outline: none;
+          border: 2px solid blue;
+        }
+      }
+    }
+    .PasswordDiv {
+      @extend .emailDiv;
+    }
+    .errorHandler {
+      color: red;
+      font-size: 18px;
+    }
+    .submitBtn {
+      font-size: 18px;
+      padding: 10px 60px;
+      color: white;
+      background-color: red;
+      border: 0;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      p {
+        font-size: 18px;
+        color: blue;
+      }
+    }
+  }
+}

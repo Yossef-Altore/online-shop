@@ -1,0 +1,36 @@
+.itemInBasket {
+  position: relative;
+  width: 80%;
+  height: 70px;
+  border-radius: 5px;
+  padding: 2px 3px;
+  box-shadow: -2px 2px 5px 1px red;
+  display: flex;
+  img {
+    height: 80%;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    justify-content: space-between;
+  }
+  span.totalPrice {
+    position: absolute;
+    left: 3px;
+    top: 4px;
+  }
+  .deleteItemFromBasket {
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    left: 3px;
+    bottom: 4px;
+    background-color: red;
+    border: 0;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,14 @@
+.RegisterFormMainDiv {
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 700px;
+  display: flex;
+  padding: 50px 44px;
+  .RegisterFormSecDiv {
+    display: flex;
+    background-color: rgb(241, 237, 237);
+    box-shadow: -5px 5px 5px 2px #ccc;
+    width: 100%;
+    height: 100%;
+  }
+}
