@@ -1,3 +1,4 @@
+@import "../mixins.scss";
 .basketAndProducts {
   width: 100%;
   position: absolute;
@@ -6,4 +7,8 @@
   min-height: 600px;
   top: 150px;
   overflow: hidden;
+  @include small {
+    height: calc(100vh - 80px);
+    top: 80px;
+  }
 }

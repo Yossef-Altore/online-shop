@@ -1,5 +1,5 @@
 import axios from "axios";
-import Header from "../components/homeComponents/Header";
+import HeaderWithMenu from "../components/HeaderWithMenu";
 import CarouselAndProducts from "../components/homeComponents/CarouselAndProducts";
 import { useCallback, useEffect, useState } from "react";
 import "./Home.scss";
@@ -37,7 +37,13 @@ const Home = () => {
   console.log("home");
   return (
     <>
-      <Header handleMenu={chosenMenuHandler} />
+      <HeaderWithMenu
+        handleMenu={chosenMenuHandler}
+        firstLinkPath="/login"
+        firstLinkText="כניסה"
+        secondLinkPath="/register"
+        secondLinkText="הרשמה"
+      />
       <CarouselAndProducts products={products} />
     </>
   );

@@ -1,8 +1,8 @@
 import "./MarketPage.scss";
-import MarketHeader from "../components/marketPageComponents/MarketHeader";
 import BasketAndProducts from "../components/marketPageComponents/BasketAndProducts";
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
+import HeaderWithMenu from "../components/HeaderWithMenu";
 
 const MarketPage = () => {
   const [chosenMenu, setChosenMenu] = useState(null);
@@ -37,7 +37,13 @@ const MarketPage = () => {
   }, [chosenMenu, memorized]);
   return (
     <div className="marketDiv">
-      <MarketHeader handleMenu={chosenMenuHandler} />
+      <HeaderWithMenu
+        handleMenu={chosenMenuHandler}
+        firstLinkPath="/"
+        firstLinkText="בית"
+        secondLinkPath="/"
+        secondLinkText="התנתק"
+      />
       <BasketAndProducts products={products} />
     </div>
   );

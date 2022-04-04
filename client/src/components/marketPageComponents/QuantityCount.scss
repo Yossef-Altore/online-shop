@@ -1,3 +1,4 @@
+@import "../mixins.scss";
 .quantityCountDiv {
   position: absolute;
   bottom: 10px;
@@ -7,6 +8,12 @@
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
+  @include small {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
   p.quantityCounter {
     width: 25%;
     border: 0.5px solid black;

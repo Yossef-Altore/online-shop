@@ -1,4 +1,5 @@
 import "./ProductsDiv.scss";
+
 import ProductCard from "./ProductCard";
 const ProductsDiv = (props) => {
   return (

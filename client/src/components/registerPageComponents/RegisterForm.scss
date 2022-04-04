@@ -1,3 +1,4 @@
+@import "../mixins.scss";
 .RegisterForm {
   height: 100%;
   width: 60%;
@@ -7,12 +8,19 @@
   justify-content: flex-start;
   padding-top: 50px;
   gap: 20px;
+  @include small {
+    width: 100%;
+    padding-top: 0px;
+  }
   div {
     width: 60%;
     height: 60px;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     z-index: 1;
+    @include small {
+      width: 90%;
+    }
 
     label {
       position: absolute;
@@ -46,6 +54,9 @@
       &:focus::placeholder {
         color: transparent;
       }
+      @include small {
+        border-radius: 10px;
+      }
     }
   }
   button {
@@ -57,6 +68,9 @@
     border-radius: 25px;
     border: 0;
     cursor: pointer;
+    @include small {
+      width: 90%;
+    }
   }
   .errorHandler {
     font-size: 18px;

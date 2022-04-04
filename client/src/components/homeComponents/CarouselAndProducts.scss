@@ -1,5 +1,9 @@
+@import "../mixins.scss";
 .CarouselAndProducts {
   width: 100%;
   position: absolute;
   top: 150px;
+  @include small {
+    top: 80px;
+  }
 }

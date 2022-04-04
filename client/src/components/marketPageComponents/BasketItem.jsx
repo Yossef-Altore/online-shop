@@ -8,7 +8,7 @@ const BasketItem = (props) => {
       <img src="images/product.png" alt="" />
       <div>
         <span>{props.name}</span>
-        <span>{props.description}</span>
+        <span className="itemDescription">{props.description}</span>
         <span>{props.count} יח'</span>
       </div>
       <span className="totalPrice">{props.totalItemPrice} ש"ח</span>

@@ -1,3 +1,4 @@
+@import "../mixins.scss";
 .LoginFormDiv {
   width: 60%;
   height: 100%;
@@ -9,6 +10,11 @@
   justify-content: flex-start;
   padding-top: 20vh;
   background-color: rgb(241, 237, 237);
+  @include small {
+    width: 100%;
+    box-shadow: 0 0 0 0;
+    padding-top: 30px;
+  }
   form {
     margin-top: 100px;
     width: 100%;
@@ -18,11 +24,18 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    @include small {
+      gap: 20px;
+      height: 300px;
+    }
     .emailDiv {
       width: 40%;
       height: 50px;
       border-radius: 25px;
       position: relative;
+      @include small {
+        width: 90%;
+      }
       label {
         position: absolute;
         top: -7px;
@@ -57,6 +70,9 @@
           outline: none;
           border: 2px solid blue;
         }
+        @include small {
+          border-radius: 10px;
+        }
       }
     }
     .PasswordDiv {
@@ -74,6 +90,9 @@
       border: 0;
       border-radius: 50px;
       cursor: pointer;
+      @include small {
+        width: 90%;
+      }
     }
     a {
       text-decoration: none;
