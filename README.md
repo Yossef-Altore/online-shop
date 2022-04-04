@@ -1,6 +1,6 @@
 # online-shop
 * the project still in proccess 
-* not responsive yet to mobile
+* responsive for mobile up to 900px 
 
 1- you will need to run npm install in main folder
 2- run npm install in client
